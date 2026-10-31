@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@theme {
+	--color-dark-green: #0B3D2E;
+	--color-beige: #F5F1E8;
+	--color-bronze: #C9A857;
+	--color-black: #1D1D1D;
+	--color-white: #FAF7F2;
+    --color-gray : #E4E4E4;
+	--font-primary: var(--montserrat)
+}
+
+@layer base {
+	* {
+		@apply font-primary text-black
+	}
+
+	body {
+		@apply bg-white
+	}
+
+	h1 {
+		@apply font-bold text-5xl text-dark-green
+	}
+
+	h2 {
+		@apply font-bold text-4xl text-dark-green
+	}
+
+	h3 {
+		@apply font-bold text-3xl text-dark-green
+	}
+
+	h4 {
+		@apply font-bold text-2xl text-dark-green
+	}
+
+	h5 {
+		@apply font-bold text-xl text-dark-green
+	}
+
+	h6 {
+		@apply font-bold text-lg text-dark-green
+	}
+
+	input, textarea, select {
+		@apply text-sm px-3.5 py-3 border border-bronze/40 rounded-xl focus:outline-none focus:border-bronze
+	}
+
+	hr {
+		@apply text-bronze/40
+	}
+
+	::placeholder {
+		@apply text-black/40
+	}
+}
+
+@layer components {
+	.button-md {
+		@apply bg-dark-green font-semibold text-white rounded-xl py-3 hover:scale-105 duration-200 enabled:cursor-pointer disabled:bg-dark-green/50
+	}
+}
